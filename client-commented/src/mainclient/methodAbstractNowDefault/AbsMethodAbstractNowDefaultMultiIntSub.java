@@ -1,0 +1,2 @@
+package mainclient.methodAbstractNowDefault;
+public abstract class AbsMethodAbstractNowDefaultMultiIntSub implements main.methodAbstractNowDefault.IMethodAbstractNowDefaultSub , main.methodAbstractNowDefault.IMethodAbstractNowDefaultOther {}

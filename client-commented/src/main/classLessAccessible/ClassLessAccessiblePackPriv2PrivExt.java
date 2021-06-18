@@ -1,0 +1,4 @@
+package main.classLessAccessible;
+public class ClassLessAccessiblePackPriv2PrivExt extends main.classLessAccessible.ClassLessAccessiblePackPriv2Priv {
+    public class ClassLessAccessiblePackPriv2PrivExtInner extends main.classLessAccessible.ClassLessAccessiblePackPriv2Priv.ClassLessAccessiblePackPriv2PrivInner {}
+}

@@ -1,0 +1,2 @@
+package mainclient.methodAbstractAddedToClass;
+public abstract class AbsMethodAbstractAddedToClassExt extends main.methodAbstractAddedToClass.MethodAbstractAddedToClassSub {}

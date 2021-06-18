@@ -1,0 +1,2 @@
+package mainclient.methodAddedToInterface;
+public class MethodAddedToInterfaceImp1 implements main.methodAddedToInterface.IMethodAddedToInterface {}

@@ -1,0 +1,2 @@
+package mainclient.interfaceRemoved;
+public interface IInterfaceRemovedExt extends main.interfaceRemoved.IInterfaceRemovedMulti {}

@@ -1,0 +1,2 @@
+package mainclient.methodNewDefault;
+public abstract class AbsMethodNewDefaultSingleInt implements main.methodNewDefault.IMethodNewDefault {}

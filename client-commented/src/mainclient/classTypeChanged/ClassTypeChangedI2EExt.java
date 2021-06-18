@@ -1,0 +1,2 @@
+package mainclient.classTypeChanged;
+public interface ClassTypeChangedI2EExt extends main.classTypeChanged.ClassTypeChangedI2E {}
