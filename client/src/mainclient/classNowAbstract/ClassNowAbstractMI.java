@@ -19,4 +19,12 @@ public class ClassNowAbstractMI {
 	public void accessConstant() {
 		int i = ClassNowAbstract.CTE;
 	}
+
+	public void createObjectAnonymous() {
+		ClassNowAbstract c = new ClassNowAbstract() {};
+	}
+
+	public void createObjectAnonymousParams() {
+		ClassNowAbstract c = new ClassNowAbstract(3) {};
+	}
 }
