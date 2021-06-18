@@ -6,4 +6,8 @@ public class SMethodNowFinal {
 		return 1;
 	}
 	
+	public int sMethodNowFinalNoOverride() {
+		return 1;
+	}
+	
 }

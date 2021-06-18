@@ -17,4 +17,8 @@ public class MethodNowFinalExt extends MethodNowFinal {
 	public int methodNowFinalClient() {
 		return super.methodNowFinal();
 	}
+	
+	public int sMethodNowFinalNoOverride() {
+		return 10;
+	}
 }
