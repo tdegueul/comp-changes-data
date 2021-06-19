@@ -1,10 +1,10 @@
 package main.methodNowAbstract;
 
-public interface IMethodNowAbastract {
+public interface IMethodNowAbstract {
 
 	public int methodStayAbstract();
 	
-	public static int methodNowAbstract() {
+	public default int methodNowAbstract() {
 		return 0;
 	}
 }
