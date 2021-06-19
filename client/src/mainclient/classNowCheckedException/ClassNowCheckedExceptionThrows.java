@@ -41,6 +41,16 @@ public class ClassNowCheckedExceptionThrows {
 		}
 	}
 	
+	public int throwsVariableException(boolean b) {
+		ClassNowCheckedException e = new ClassNowCheckedException();
+		if (b) {
+			return 0;
+		}
+		else {
+			throw e;
+		}
+	}
+	
 	public int throwsExcepChecked(boolean b) throws ClassNowCheckedException {
 		if (b) {
 			return 0;
@@ -76,8 +86,8 @@ public class ClassNowCheckedExceptionThrows {
 			throw new ClassNowCheckedExceptionClientSub();
 		}
 	}
-
-	public int throwsVariableException(boolean b) {
+	
+	public int throwsVariableExceptionChecked(boolean b) throws ClassNowCheckedException {
 		ClassNowCheckedException e = new ClassNowCheckedException();
 		if (b) {
 			return 0;
@@ -86,14 +96,39 @@ public class ClassNowCheckedExceptionThrows {
 			throw e;
 		}
 	}
-
-	public int throwsVariableExceptionChecked(boolean b) throws ClassNowCheckedException {
-		ClassNowCheckedException e = new ClassNowCheckedException();
+	
+	public int throwsExcepCaughtSameType(boolean b) {
 		if (b) {
 			return 0;
 		}
 		else {
-			throw e;
+			try {
+				throw new ClassNowCheckedException();
+			} catch (ClassNowCheckedException e) {
+				return 1;
+			}
+		}
+	}
+	
+	public int throwExcepCaughtExceptionType(boolean b) {
+		if (b) {
+			return 0;
+		}
+		else {
+			try {
+				throw new ClassNowCheckedException();
+			} catch (Exception e) {
+				return 1;
+			}
+		}
+	}
+	
+	public int throwsExcepCheckedType(boolean b) throws Exception {
+		if (b) {
+			return 0;
+		}
+		else {
+			throw new ClassNowCheckedException();
 		}
 	}
 }
