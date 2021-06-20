@@ -1,0 +1,2 @@
+package mainclient.methodNowAbstract;
+public interface MethodNowAbstractIntf2 extends main.methodNowAbstract.IMethodNowAbstractSub {}

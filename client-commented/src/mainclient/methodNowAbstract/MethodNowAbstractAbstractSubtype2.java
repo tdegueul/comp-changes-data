@@ -1,0 +1,2 @@
+package mainclient.methodNowAbstract;
+public abstract class MethodNowAbstractAbstractSubtype2 extends main.methodNowAbstract.MethodNowAbstractSub {}
