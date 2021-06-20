@@ -1,5 +1,6 @@
 package mainclient.fieldTypeChanged;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -80,5 +81,79 @@ public class FieldTypeChangedFA {
 		Object[] u = ftc.narrowReferenceArray;
 		A[] v = ftc.widenReferenceArray;
 		Object[] w = ftc.changedReferenceArray;
+	}
+
+	public void accessAndWrite() {
+		FieldTypeChanged ftc = new FieldTypeChanged();
+		
+		ftc.unchangedPrimitive = 2;
+		ftc.unchangedReference = new A();
+		
+		ftc.changedPrimitive = 2;
+		ftc.changedReference = new A();
+		
+		ftc.widenPrimitive = 23;
+		ftc.widenReference = new B();
+		
+		ftc.narrowPrimitive = 2;
+		ftc.narrowReference = new A();
+		
+		ftc.boxing = 2;
+		ftc.unboxing = 2;
+		ftc.changedBoxing = false;
+		
+		ftc.narrowReferenceList = new ArrayList<A>();
+		ftc.widenReferenceList = new ArrayList<B>();
+		ftc.changedReferenceList = new ArrayList<A>();
+		
+		ftc.narrowListReference = new ArrayList<A>();
+		ftc.widenListReference = new ArrayList<A>(); 
+		
+		ftc.narrowPrimitiveArray = new int[1];
+		ftc.widenPrimitiveArray = new int[1];
+		
+		ftc.boxPrimitiveArray = new int[1];
+		ftc.unboxPrimitiveArray = new Integer[1];
+		
+		ftc.narrowReferenceArray = new A[1];
+		ftc.widenReferenceArray = new B[1];
+		ftc.changedReferenceArray  = new A[1];
+	}
+	
+	public void accessAndWriteCompatible() {
+		FieldTypeChanged ftc = new FieldTypeChanged();
+		
+		ftc.unchangedPrimitive = (int) 2.2;
+		ftc.unchangedReference = new B();
+		
+		ftc.changedPrimitive = (int) 2.2;
+		ftc.changedReference = new B();
+		
+		ftc.widenPrimitive = (char) 23;
+		ftc.widenReference = new B();
+		
+		ftc.narrowPrimitive = (short) 2.2;
+		ftc.narrowReference = new B();
+		
+		ftc.boxing = new Integer(2);
+		ftc.unboxing = new Integer(2);
+		ftc.changedBoxing = (2 == 2);
+		
+		ftc.narrowReferenceList = new ArrayList<A>() {};
+		ftc.widenReferenceList = new ArrayList<B>() {};
+		ftc.changedReferenceList = new ArrayList<A>() {};
+		
+		ftc.narrowListReference = new ArrayList<A>() {};
+		ftc.widenListReference = new ArrayList<A>() {};
+		
+		ftc.narrowPrimitiveArray = new int[1];
+		ftc.widenPrimitiveArray = new int[1];
+		
+		ftc.boxPrimitiveArray = new int[1];
+		ftc.unboxPrimitiveArray = new Integer[1];
+		
+		ftc.narrowReferenceArray = new A[1];
+		ftc.widenReferenceArray = new B[1];
+		ftc.changedReferenceArray  = new A[1];
 	}
 }
