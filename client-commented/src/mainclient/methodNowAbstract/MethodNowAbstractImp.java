@@ -1,11 +1,8 @@
 package mainclient.methodNowAbstract;
-public class MethodNowAbstractImp implements main.methodNowAbstract.IMethodNowAbastract {
+/* [METHOD_NOW_ABSTRACT:IMPLEMENTS] */
+public class MethodNowAbstractImp implements main.methodNowAbstract.IMethodNowAbstract {
     @java.lang.Override
     public int methodStayAbstract() {
         return 0;
-    }
-
-    public int methodNowAbstractClient() {
-        return main.methodNowAbstract.IMethodNowAbastract.methodNowAbstract();
     }
 }

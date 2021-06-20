@@ -3,6 +3,8 @@ package mainclient.fieldTypeChanged;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
+import java.util.function.Predicate;
 
 import main.fieldTypeChanged.A;
 import main.fieldTypeChanged.B;
@@ -44,6 +46,20 @@ public class FieldTypeChangedFA {
 		A[] u = ftc.narrowReferenceArray;
 		B[] v = ftc.widenReferenceArray;
 		A[] w = ftc.changedReferenceArray;
+	}
+
+	public void casts() {
+		FieldTypeChanged ftc = new FieldTypeChanged();
+		
+		B a = (B) ftc.unchangedReference;
+		B b = (B) ftc.changedReference;
+		B c = (B) ftc.widenReference;
+		B d = (B) ftc.narrowReference;
+		
+		ftc.widenReference = (B) ftc.unchangedReference;
+		ftc.widenReference = (B) ftc.changedReference;
+		ftc.widenReference = (B) ftc.widenReference;
+		ftc.widenReference = (B) ftc.narrowReference;
 	}
 	
 	public void accessAndAssignCompatible() {
@@ -165,5 +181,57 @@ public class FieldTypeChangedFA {
 		
 		A c = ftc.differentReference;
 		int d = ftc.differentPrimitive;
+	}
+	
+	public void otherUses() {
+		FieldTypeChanged ftc = new FieldTypeChanged();
+		
+		Objects.isNull(ftc.differentReference);
+		Objects.isNull(ftc.differentPrimitive);
+		
+		String s = ftc.differentPrimitive != 0 ? "y" : "n";
+		
+		Predicate<Integer> f1 = (i) -> i == ftc.differentPrimitive;
+		Predicate<Integer> f2 = (i) -> {
+			return
+				i == ftc.differentPrimitive &&
+				new A().equals(ftc.differentReference);
+		};
+		
+		List<A> as = new ArrayList<>();
+		as.add(ftc.differentReference);
+		as.add(ftc.differentReference);
+		
+		int a = 0;
+		a += ftc.differentPrimitive;
+		
+		int b = a + ftc.differentPrimitive;
+		int[] c = new int[ftc.differentPrimitive];
+		int[] d = new int[] { ftc.differentPrimitive };
+		
+		boolean b1 = ftc.differentReference instanceof A;
+		
+		while (ftc.differentPrimitiveBoolean);
+		do {} while (ftc.differentPrimitiveBoolean);
+		if (ftc.differentPrimitiveBoolean) {}
+		else if (ftc.differentPrimitiveBoolean);
+		while (ftc.differentPrimitiveBoolean);
+		for (A t : ftc.changedReferenceArray);
+		
+		try {
+			throw ftc.exceptionTypeChanged;
+		} catch (Exception e) {
+			
+		}
+		
+		class Cls {
+			public A f1 = ftc.differentReference;
+			public int f2 = ftc.differentPrimitive;
+			public A f3 = ftc.sameReference;
+			public int f4 = ftc.samePrimitive;
+		}
+		
+		Cls cls = new Cls();
+		cls.f1 = ftc.differentReference;
 	}
 }

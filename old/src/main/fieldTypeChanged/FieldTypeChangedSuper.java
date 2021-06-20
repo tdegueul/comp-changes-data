@@ -6,4 +6,5 @@ public class FieldTypeChangedSuper {
 	
 	public A differentReference;
 	public int differentPrimitive;
+	public boolean differentPrimitiveBoolean;
 }

@@ -6,4 +6,5 @@ public class FieldTypeChangedSuper {
 	
 	public C differentReference;
 	public C differentPrimitive;
+	public char differentPrimitiveBoolean;
 }

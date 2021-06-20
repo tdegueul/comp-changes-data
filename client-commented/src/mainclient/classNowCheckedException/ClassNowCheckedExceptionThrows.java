@@ -4,6 +4,7 @@ public class ClassNowCheckedExceptionThrows {
         if (b) {
             return 0;
         } else {
+            /* [CLASS_NOW_CHECKED_EXCEPTION:THROWS] */
             throw new main.classNowCheckedException.ClassNowCheckedException();
         }
     }
@@ -12,6 +13,7 @@ public class ClassNowCheckedExceptionThrows {
         if (b) {
             return 0;
         } else {
+            /* [CLASS_NOW_CHECKED_EXCEPTION:THROWS] */
             throw new main.classNowCheckedException.ClassNowCheckedExceptionSub();
         }
     }
@@ -20,6 +22,7 @@ public class ClassNowCheckedExceptionThrows {
         if (b) {
             return 0;
         } else {
+            /* [CLASS_NOW_CHECKED_EXCEPTION:THROWS] */
             throw new mainclient.classNowCheckedException.ClassNowCheckedExceptionClient();
         }
     }
@@ -28,7 +31,18 @@ public class ClassNowCheckedExceptionThrows {
         if (b) {
             return 0;
         } else {
+            /* [CLASS_NOW_CHECKED_EXCEPTION:THROWS] */
             throw new mainclient.classNowCheckedException.ClassNowCheckedExceptionClientSub();
+        }
+    }
+
+    public int throwsVariableException(boolean b) {
+        main.classNowCheckedException.ClassNowCheckedException e = new main.classNowCheckedException.ClassNowCheckedException();
+        if (b) {
+            return 0;
+        } else {
+            /* [CLASS_NOW_CHECKED_EXCEPTION:THROWS] */
+            throw e;
         }
     }
 
@@ -64,7 +78,7 @@ public class ClassNowCheckedExceptionThrows {
         }
     }
 
-    public int throwsVariableException(boolean b) {
+    public int throwsVariableExceptionChecked(boolean b) throws main.classNowCheckedException.ClassNowCheckedException {
         main.classNowCheckedException.ClassNowCheckedException e = new main.classNowCheckedException.ClassNowCheckedException();
         if (b) {
             return 0;
@@ -73,12 +87,35 @@ public class ClassNowCheckedExceptionThrows {
         }
     }
 
-    public int throwsVariableExceptionChecked(boolean b) throws main.classNowCheckedException.ClassNowCheckedException {
-        main.classNowCheckedException.ClassNowCheckedException e = new main.classNowCheckedException.ClassNowCheckedException();
+    public int throwsExcepCaughtSameType(boolean b) {
         if (b) {
             return 0;
         } else {
-            throw e;
+            try {
+                throw new main.classNowCheckedException.ClassNowCheckedException();
+            } catch (main.classNowCheckedException.ClassNowCheckedException e) {
+                return 1;
+            }
+        }
+    }
+
+    public int throwExcepCaughtExceptionType(boolean b) {
+        if (b) {
+            return 0;
+        } else {
+            try {
+                throw new main.classNowCheckedException.ClassNowCheckedException();
+            } catch (java.lang.Exception e) {
+                return 1;
+            }
+        }
+    }
+
+    public int throwsExcepCheckedType(boolean b) throws java.lang.Exception {
+        if (b) {
+            return 0;
+        } else {
+            throw new main.classNowCheckedException.ClassNowCheckedException();
         }
     }
 }

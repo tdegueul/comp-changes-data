@@ -37,4 +37,6 @@ public class FieldTypeChanged extends FieldTypeChangedSuper {
 	public B[] narrowReferenceArray;
 	public A[] widenReferenceArray;
 	public C[] changedReferenceArray;
+	
+	public A exceptionTypeChanged;
 }

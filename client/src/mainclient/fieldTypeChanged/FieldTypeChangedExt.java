@@ -9,7 +9,6 @@ import main.fieldTypeChanged.FieldTypeChanged;
 public class FieldTypeChangedExt extends FieldTypeChanged {
 
 	public void accessAndAssign() {
-		int a1 = unchangedPrimitive;
 		int a2 = this.unchangedPrimitive;
 		int a3 = super.unchangedPrimitive;
 		A b1 = unchangedReference;

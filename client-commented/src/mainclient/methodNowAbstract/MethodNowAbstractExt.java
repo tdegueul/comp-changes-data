@@ -1,4 +1,5 @@
 package mainclient.methodNowAbstract;
+/* [METHOD_NOW_ABSTRACT:EXTENDS] */
 public class MethodNowAbstractExt extends main.methodNowAbstract.MethodNowAbstract {
     @java.lang.Override
     public int methodStayAbstract() {
@@ -6,10 +7,12 @@ public class MethodNowAbstractExt extends main.methodNowAbstract.MethodNowAbstra
     }
 
     public int methodNowAbstractClientSuperKey() {
-        return super.methodNowAbstract();
+        return /* [METHOD_NOW_ABSTRACT:METHOD_INVOCATION] */
+        super.methodNowAbstract();
     }
 
     public int methodNowAbstractClientNoSuperKey() {
-        return methodNowAbstract();
+        return /* [METHOD_NOW_ABSTRACT:METHOD_INVOCATION] */
+        methodNowAbstract();
     }
 }
