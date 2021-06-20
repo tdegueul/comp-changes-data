@@ -2,7 +2,7 @@ package main.fieldTypeChanged;
 
 import java.util.List;
 
-public class FieldTypeChanged {
+public class FieldTypeChanged extends FieldTypeChangedSuper {
 	public int unchangedPrimitive;
 	public A unchangedReference;
 	

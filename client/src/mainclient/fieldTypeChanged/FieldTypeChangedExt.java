@@ -88,4 +88,20 @@ public class FieldTypeChangedExt extends FieldTypeChanged {
 		A[] w2 = this.changedReferenceArray;
 		A[] w3 = super.changedReferenceArray;
 	}
+	
+	public void accessSuper() {
+		A a1 = sameReference;
+		A a2 = this.sameReference;
+		A a3 = super.sameReference;
+		int b1 = samePrimitive;
+		int b2 = this.samePrimitive;
+		int b3 = super.samePrimitive;
+		
+		A c1 = differentReference;
+		A c2 = this.differentReference;
+		A c3 = super.differentReference;
+		int d1 = differentPrimitive;
+		int d2 = this.differentPrimitive;
+		int d3 = super.differentPrimitive;
+	}
 }

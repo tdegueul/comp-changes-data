@@ -156,4 +156,14 @@ public class FieldTypeChangedFA {
 		ftc.widenReferenceArray = new B[1];
 		ftc.changedReferenceArray  = new A[1];
 	}
+
+	public void accessSuper() {
+		FieldTypeChanged ftc = new FieldTypeChanged();
+		
+		A a = ftc.sameReference;
+		int b = ftc.samePrimitive;
+		
+		A c = ftc.differentReference;
+		int d = ftc.differentPrimitive;
+	}
 }
