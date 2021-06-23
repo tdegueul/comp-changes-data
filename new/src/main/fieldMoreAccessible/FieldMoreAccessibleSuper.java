@@ -2,9 +2,9 @@ package main.fieldMoreAccessible;
 
 public class FieldMoreAccessibleSuper {
 	public int superProtected2Public;
-	protected int superPackagePrivateToProtected;
 	public int superPackagePrivate2Public;
-	int superPrivate2PackagePrivate;
-	protected int superPrivate2Protected;
+	protected int superPackagePrivateToProtected;
 	public int superPrivate2Public;
+	protected int superPrivate2Protected;
+	int superPrivate2PackagePrivate;
 }
