@@ -46,14 +46,14 @@ public class FieldTypeChangedFA {
         main.fieldTypeChanged.B b = /* [FIELD_TYPE_CHANGED:FIELD_ACCESS] */
         ((main.fieldTypeChanged.B) (ftc.changedReference));
         main.fieldTypeChanged.B c = /* [FIELD_TYPE_CHANGED:FIELD_ACCESS] */
-        ((main.fieldTypeChanged.B) (ftc.widenReference));
-        main.fieldTypeChanged.B d = ((main.fieldTypeChanged.B) (ftc.narrowReference));
-        ftc.widenReference = ((main.fieldTypeChanged.B) (ftc.unchangedReference));
+        ftc.widenReference;
+        // B d = ftc.narrowReference;
+        // ftc.widenReference = ftc.unchangedReference;
         ftc.widenReference = /* [FIELD_TYPE_CHANGED:FIELD_ACCESS] */
         ((main.fieldTypeChanged.B) (ftc.changedReference));
         ftc.widenReference = /* [FIELD_TYPE_CHANGED:FIELD_ACCESS] */
-        ((main.fieldTypeChanged.B) (ftc.widenReference));
-        ftc.widenReference = ((main.fieldTypeChanged.B) (ftc.narrowReference));
+        ftc.widenReference;
+        // ftc.widenReference = ftc.narrowReference;
     }
 
     public void accessAndAssignCompatible() {

@@ -5,6 +5,19 @@ public class MethodRemovedExt extends main.methodRemoved.MethodRemoved {
     }
 
     public int methodRemovedClientSuper() {
-        return super.methodRemoved();
+        return /* [METHOD_REMOVED:METHOD_INVOCATION] */
+        super.methodRemoved();
+    }
+
+    /* [METHOD_REMOVED:METHOD_OVERRIDE] */
+    @java.lang.Override
+    public int methodRemoved() {
+        return /* [METHOD_REMOVED:METHOD_INVOCATION] */
+        super.methodRemoved();
+    }
+
+    @java.lang.Override
+    public int methodStay() {
+        return super.methodStay();
     }
 }

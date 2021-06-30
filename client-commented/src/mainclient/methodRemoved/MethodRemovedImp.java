@@ -1,5 +1,6 @@
 package mainclient.methodRemoved;
 public class MethodRemovedImp implements main.methodRemoved.IMethodRemoved {
+    /* [METHOD_REMOVED:METHOD_OVERRIDE] */
     @java.lang.Override
     public int methodRemoved() {
         return 0;

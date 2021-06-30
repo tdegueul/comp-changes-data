@@ -1,5 +1,6 @@
 package mainclient.unstablePkg.methodRemoved;
 public class MethodRemovedImp implements main.unstablePkg.methodRemoved.IMethodRemoved {
+    /* [METHOD_REMOVED:METHOD_OVERRIDE] */
     @java.lang.Override
     public int methodRemoved() {
         return 0;
