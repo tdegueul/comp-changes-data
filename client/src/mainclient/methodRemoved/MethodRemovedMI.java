@@ -8,5 +8,9 @@ public class MethodRemovedMI {
 		MethodRemoved m = new MethodRemoved();
 		return m.methodRemoved();
 	}
-	
+
+	public int methodRemovedStatic() {
+		return MethodRemoved.methodRemovedStatic();
+	}
+
 }
